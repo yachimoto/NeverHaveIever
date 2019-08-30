@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
-    
     @IBOutlet weak var textField: UITextField!
     
     
@@ -21,10 +19,13 @@ class ViewController: UIViewController {
     
     var nainaicount = 0
 
+    var category = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        textField.text = category
+      
     }
 
     //  あるあるボタン
