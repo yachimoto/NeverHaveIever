@@ -12,20 +12,21 @@ class DailylifeViewController: UIViewController,UITableViewDataSource,UITableVie
     
     let data = ["1","2","3"]
     
-    // 日常用
+    // 日常経験
     let daily = ["D1","D2","D3"]
 
     // 学校・仕事
     let school = ["S1","S2","S3"]
 
     //恋愛
-    let love = ["L1","L2","L3"]
+    let love = ["今まで10人以上と付き合った","有名人と付き合った",
+    "一夜だけの恋をした","好きじゃない人と付き合った",]
     
     // エロ
-    let green = ["G1","G2","G3"]
+    let green = ["今まで10人以上とセックスした","セフレがいた","G3"]
 
     //  おすすめ
-    let recommendation = ["R1","R2","R3"]
+    let recommendation = ["R1","R2","R3","ら"]
 
     
     
@@ -102,7 +103,8 @@ class DailylifeViewController: UIViewController,UITableViewDataSource,UITableVie
         top.category = value
         
         // ③画面遷移
-        self.present(top, animated: true, completion: nil)
+        self.show(top, sender: nil)
+//        self.present(top, animated: true, completion: nil)
         
     }
     

@@ -42,9 +42,11 @@ class ViewController: UIViewController {
             alert.addAction(yesAction)
             return
         }
-        
         aruarucount += 1
         numberLabel.text = "\(nainaicount + aruarucount)"
+        
+        
+        
 
     }
     
@@ -80,10 +82,18 @@ class ViewController: UIViewController {
         }
         //  作成した選択肢をアラート画面に追加する
             alert.addAction(yesAction)
-
-    }
+        }
     
-    
+        // textFieldをresultLabelに移す画面遷移
+        // storyboardのインスタンス取得
+        let storyboard: UIStoryboard = self.storyboard!
+        // 遷移先ViewControllerのインスタンス取得
+        let end = storyboard.instantiateViewController(withIdentifier: "end") as! ResultViewController
+        // ①値の設定
+        end.result = textField.text!
+        end.yes = aruarucount
+        // ③画面遷移
+        self.present(end, animated: true, completion: nil)
     }
     
 }
