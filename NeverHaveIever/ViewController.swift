@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var numberLabel: UILabel!
     
+    
+    @IBOutlet weak var yesButton: UIButton!
+    
+    
+    @IBOutlet weak var noButton: UIButton!
+    
     var aruarucount = 0
     
     var nainaicount = 0
@@ -25,7 +31,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         textField.text = category
-      
+        
+        makeButtonDesign(button: yesButton)
+        
+        makeButtonDesign(button: noButton)
+
     }
 
     //  あるあるボタン
@@ -95,5 +105,57 @@ class ViewController: UIViewController {
         // ③画面遷移
         self.present(end, animated: true, completion: nil)
     }
+ 
+    // ボタンのデザインを作成
+    func makeButtonDesign(button: UIButton!) {
+        
+        var topColor: UIColor
+        var bottomColor: UIColor
+
+        
+        
+        if button == yesButton {
+            /////////////////赤色
+            //グラデーションの開始色
+            topColor = UIColor(red:186/255, green:58/255, blue:33/255, alpha:1)
+            //グラデーションの終了色
+            bottomColor = UIColor(red:150/255, green:58/255, blue:33/255, alpha:1)
+            
+        } else {
+            /////////////////青色
+            //グラデーションの開始色
+            topColor = UIColor(red:118/255, green:184/255, blue:248/255, alpha:1)
+            //グラデーションの終了色
+            bottomColor = UIColor(red:66/255, green:103/255, blue:178/255, alpha:1)
+            /////////////////青色
+            
+        }
+        
+        
+        //グラデーションの色を配列で管理
+        let gradientColors: [CGColor] = [topColor.cgColor, bottomColor.cgColor]
+        
+        //グラデーションレイヤーを作成
+        let gradientLayer: CAGradientLayer = CAGradientLayer()
+        
+        //グラデーションの色をレイヤーに割り当てる
+        gradientLayer.colors = gradientColors
+        //グラデーションレイヤーをスクリーンサイズにする
+        gradientLayer.frame = button.bounds
+        
+        // 角度を変更する
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        
+        //グラデーションレイヤーをビューの一番下に配置
+        button.layer.insertSublayer(gradientLayer, at: 0)
+        
+        //        button.backgroundColor = .black
+        button.setTitleColor(UIColor.white, for: UIControl.State.normal)  // 4
+        button.layer.cornerRadius = 18
+        button.clipsToBounds = true
+    }
+    
+    
     
 }

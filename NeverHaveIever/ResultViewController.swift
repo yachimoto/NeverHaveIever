@@ -18,7 +18,7 @@ class ResultViewController: UIViewController {
     //    textFieldの値をresultLabelに持ってくる
     var result = ""
     
-    //    yesCLickButtonの値をyesLabelに持ってくる
+//    yesCLickButtonの値をyesLabelに持ってくる
     var yes = 0
     
     override func viewDidLoad() {
