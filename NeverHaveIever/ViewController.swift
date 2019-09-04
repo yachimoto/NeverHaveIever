@@ -21,9 +21,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var noButton: UIButton!
     
+    
+    @IBOutlet weak var resultButton: UIButton!
+    
+    
+    @IBOutlet weak var categoryButton: UIButton!
+    
+    
     var aruarucount = 0
     
     var nainaicount = 0
+    
+    
 
     var category = ""
     
@@ -35,6 +44,10 @@ class ViewController: UIViewController {
         makeButtonDesign(button: yesButton)
         
         makeButtonDesign(button: noButton)
+        
+        makeButtonDesign(button: resultButton)
+        
+        makeButtonDesign(button: categoryButton)
 
     }
 
@@ -54,9 +67,6 @@ class ViewController: UIViewController {
         }
         aruarucount += 1
         numberLabel.text = "\(nainaicount + aruarucount)"
-        
-        
-        
 
     }
     
@@ -119,12 +129,22 @@ class ViewController: UIViewController {
             //グラデーションの開始色
             topColor = UIColor(red:186/255, green:58/255, blue:33/255, alpha:1)
             //グラデーションの終了色
-            bottomColor = UIColor(red:150/255, green:58/255, blue:33/255, alpha:1)
+            bottomColor = UIColor(red:130/255, green:58/255, blue:63/255, alpha:1)
             
+        } else if button == resultButton {
+            //グラデーションの開始色
+            topColor = UIColor(red:233/255, green:205/255, blue:143/255, alpha:1)
+            //グラデーションの終了色
+            bottomColor = UIColor(red:210/255, green:178/255, blue:100/255, alpha:1)
+        } else if button == categoryButton {
+            //グラデーションの開始色
+            topColor = UIColor(red:56/255, green:58/255, blue:53/255, alpha:1)
+            //グラデーションの終了色
+            bottomColor = UIColor(red:80/255, green:78/255, blue:83/255, alpha:1)
         } else {
             /////////////////青色
             //グラデーションの開始色
-            topColor = UIColor(red:118/255, green:184/255, blue:248/255, alpha:1)
+            topColor = UIColor(red:108/255, green:114/255, blue:168/255, alpha:1)
             //グラデーションの終了色
             bottomColor = UIColor(red:66/255, green:103/255, blue:178/255, alpha:1)
             /////////////////青色

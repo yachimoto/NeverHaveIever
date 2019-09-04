@@ -73,23 +73,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uma-LS-bnd">
-                                <rect key="frame" x="31" y="611" width="143" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="参考カテゴリー">
-                                    <color key="titleColor" red="1" green="0.13338035810000001" blue="0.118349072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="FoS-Rx-W4j" kind="show" id="C8r-62-isn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkU-Td-UHg">
-                                <rect key="frame" x="243" y="611" width="116" height="30"/>
+                                <rect key="frame" x="237" y="605" width="122" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="結果発表"/>
+                                <color key="backgroundColor" red="0.75991615117671241" green="0.56553578380000002" blue="0.2419734589041096" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="結果発表">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="resultClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ypg-4g-gYU"/>
                                 </connections>
@@ -110,21 +101,36 @@
                                     <action selector="yesClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TAX-tP-LcP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uma-LS-bnd">
+                                <rect key="frame" x="20" y="605" width="143" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="参考カテゴリー">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FoS-Rx-W4j" kind="show" id="C8r-62-isn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="C3k-jL-9FK"/>
                     <connections>
+                        <outlet property="categoryButton" destination="Uma-LS-bnd" id="18E-HC-4s1"/>
                         <outlet property="noButton" destination="65f-MI-ALx" id="W0V-Qd-9rz"/>
                         <outlet property="numberLabel" destination="w47-bJ-jF2" id="K56-FZ-KRc"/>
+                        <outlet property="resultButton" destination="zkU-Td-UHg" id="4GK-7v-uj1"/>
                         <outlet property="textField" destination="j3j-zV-Acc" id="rNp-m5-ESQ"/>
                         <outlet property="yesButton" destination="AqO-jR-uWN" id="eKg-8z-Gh1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166.6666666666667" y="128.57142857142856"/>
+            <point key="canvasLocation" x="1165.5999999999999" y="128.18590704647679"/>
         </scene>
         <!--Dailylife View Controller-->
         <scene sceneID="cST-RJ-G3Q">
@@ -200,56 +206,56 @@
                                 <rect key="frame" x="97" y="371" width="180" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.097084133995658517" blue="0.12565094334399962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="恋　愛">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loveButton:" destination="FoS-Rx-W4j" eventType="touchUpInside" id="Ukh-kO-r9F"/>
+                                    <action selector="loveClickButton:" destination="FoS-Rx-W4j" eventType="touchUpInside" id="Ukh-kO-r9F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIF-j9-56p">
                                 <rect key="frame" x="97" y="286" width="180" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.44355218997613266" green="0.8297311230964467" blue="0.41581168976302707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="学校/仕事">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="schoolButton:" destination="FoS-Rx-W4j" eventType="touchUpInside" id="VYw-nU-T8M"/>
+                                    <action selector="schoolClickButton:" destination="FoS-Rx-W4j" eventType="touchUpInside" id="VYw-nU-T8M"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIE-BN-r6u">
-                                <rect key="frame" x="107" y="197" width="180" height="36"/>
+                                <rect key="frame" x="97" y="184" width="180" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8297311230964467" green="0.75720428707079968" blue="0.09447629343044335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="日常生活">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="dailyButton:" destination="FoS-Rx-W4j" eventType="touchUpInside" id="O4Z-24-cQk"/>
+                                    <action selector="dailyClickButton:" destination="FoS-Rx-W4j" eventType="touchUpInside" id="O4Z-24-cQk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLO-kP-Lp1">
                                 <rect key="frame" x="97" y="446" width="175" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.16439707944829263" blue="0.85441747089692033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="エ　ロ"/>
                                 <connections>
-                                    <action selector="greenButton:" destination="FoS-Rx-W4j" eventType="touchUpInside" id="pOq-gI-AUU"/>
+                                    <action selector="greenClickButton:" destination="FoS-Rx-W4j" eventType="touchUpInside" id="pOq-gI-AUU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7c-Hc-huZ">
-                                <rect key="frame" x="100" y="536" width="175" height="40"/>
+                                <rect key="frame" x="97" y="532" width="175" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="おすすめ"/>
                                 <connections>
-                                    <action selector="recommendationButton:" destination="FoS-Rx-W4j" eventType="touchUpInside" id="nWs-Hc-KBm"/>
+                                    <action selector="recommendationClickButton:" destination="FoS-Rx-W4j" eventType="touchUpInside" id="nWs-Hc-KBm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -257,6 +263,11 @@
                         <viewLayoutGuide key="safeArea" id="69B-fN-LeO"/>
                     </view>
                     <connections>
+                        <outlet property="dailyButton" destination="VIE-BN-r6u" id="Gih-99-rS2"/>
+                        <outlet property="greenButton" destination="LLO-kP-Lp1" id="xSb-4i-eer"/>
+                        <outlet property="loveButton" destination="Ksq-ca-ws7" id="k2h-D2-S1E"/>
+                        <outlet property="recommendationButton" destination="l7c-Hc-huZ" id="kvw-yY-XYu"/>
+                        <outlet property="schoolButton" destination="KIF-j9-56p" id="m6r-Rk-K9k"/>
                         <segue destination="fL0-ES-Eqb" kind="show" identifier="toDaily" id="Gy9-uV-RMO"/>
                     </connections>
                 </viewController>
