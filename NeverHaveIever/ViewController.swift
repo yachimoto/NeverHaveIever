@@ -12,18 +12,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     
-    
     @IBOutlet weak var numberLabel: UILabel!
     
-    
     @IBOutlet weak var yesButton: UIButton!
-    
-    
+
     @IBOutlet weak var noButton: UIButton!
     
-    
     @IBOutlet weak var resultButton: UIButton!
-    
     
     @IBOutlet weak var categoryButton: UIButton!
     
@@ -89,6 +84,9 @@ class ViewController: UIViewController {
         numberLabel.text = "\(nainaicount + aruarucount)"
 
     }
+    
+    
+    
     
     //  結果ボタン
     @IBAction func resultClickButton(_ sender: UIButton) {
