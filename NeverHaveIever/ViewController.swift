@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     
     
     var aruarucount = 0
-    
     var nainaicount = 0
     
     
@@ -42,7 +41,7 @@ class ViewController: UIViewController {
         
         makeButtonDesign(button: resultButton)
         
-        makeButtonDesign(button: categoryButton)
+//        makeButtonDesign(button: categoryButton)
 
     }
 
@@ -86,7 +85,12 @@ class ViewController: UIViewController {
     }
     
     
-    
+    // リセットボタン
+    @IBAction func resetClickButton(_ sender: UIButton) {
+        numberLabel.text = "0"
+        nainaicount = 0
+        aruarucount = 0
+    }
     
     //  結果ボタン
     @IBAction func resultClickButton(_ sender: UIButton) {
@@ -133,13 +137,14 @@ class ViewController: UIViewController {
             //グラデーションの開始色
             topColor = UIColor(red:233/255, green:205/255, blue:143/255, alpha:1)
             //グラデーションの終了色
-            bottomColor = UIColor(red:210/255, green:178/255, blue:100/255, alpha:1)
-        } else if button == categoryButton {
-            //グラデーションの開始色
-            topColor = UIColor(red:56/255, green:58/255, blue:53/255, alpha:1)
-            //グラデーションの終了色
-            bottomColor = UIColor(red:80/255, green:78/255, blue:83/255, alpha:1)
-        } else {
+            bottomColor = UIColor(red:210/255, green:178/255, blue:100/255, alpha:1)}
+//         else if button == categoryButton {
+//            //グラデーションの開始色
+//            topColor = UIColor(red:56/255, green:58/255, blue:53/255, alpha:1)
+//            //グラデーションの終了色
+//            bottomColor = UIColor(red:80/255, green:78/255, blue:83/255, alpha:1)
+//        }
+        else {
             /////////////////青色
             //グラデーションの開始色
             topColor = UIColor(red:108/255, green:114/255, blue:168/255, alpha:1)
