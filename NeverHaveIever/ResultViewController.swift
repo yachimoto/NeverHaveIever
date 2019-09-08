@@ -13,15 +13,16 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     
+    @IBOutlet weak var numLabel: UILabel!
     
     @IBOutlet weak var yesLabel: UILabel!
     
-    
     //    textFieldの値をresultLabelに持ってくる
     var result = ""
-    
     //    yesCLickButtonの値をyesLabelに持ってくる
     var yes = 0
+    //    numberLabelの値をnumLabelに持ってくる
+    var num = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,9 @@ class ResultViewController: UIViewController {
         //    textFieldの値が出る
         resultLabel.text = result
     
+        //    numberLabelの値が出る
+        numLabel.text = num
+        
         //    yesCLickButtonの値が出る
         yesLabel.text = "\(yes)"
     }

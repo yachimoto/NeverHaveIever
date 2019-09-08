@@ -119,6 +119,7 @@ class ViewController: UIViewController {
         // ①値の設定
         end.result = textView.text!
         end.yes = aruarucount
+        end.num = numberLabel.text!
         // ③画面遷移
         self.present(end, animated: true, completion: nil)
     }
