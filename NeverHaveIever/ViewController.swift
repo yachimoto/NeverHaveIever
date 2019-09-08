@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var textView: UITextView!
     
     @IBOutlet weak var numberLabel: UILabel!
     
@@ -33,23 +34,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textField.text = category
+        textView.text = category
         
+        // 枠の幅
+        textView.layer.borderWidth = 1.0
+        // 枠を丸にする方法
+        textView.layer.cornerRadius = 20.0
+        
+        // ボタンのデザインを決める関数
         makeButtonDesign(button: yesButton)
         
         makeButtonDesign(button: noButton)
         
         makeButtonDesign(button: resultButton)
         
-//        makeButtonDesign(button: categoryButton)
-
     }
 
     //  あるあるボタン
     @IBAction func yesClickButton(_ sender: UIButton) {
         
         //  アラート
-        if textField.text == "" {
+        if textView.text == "" {
             let alert = UIAlertController(title: "早とちりですね", message: "質問をご入力ください", preferredStyle: .alert)
             present(alert, animated: true, completion: nil)
             //  通常の選択肢を作成する
@@ -68,7 +73,7 @@ class ViewController: UIViewController {
     @IBAction func noClickButton(_ sender: UIButton) {
         
         //  アラート
-        if textField.text == "" {
+        if textView.text == "" {
             let alert = UIAlertController(title: "おっちょこちょいですね", message: "質問をご入力ください", preferredStyle: .alert)
             present(alert, animated: true, completion: nil)
             //  通常の選択肢を作成する
@@ -96,7 +101,7 @@ class ViewController: UIViewController {
     @IBAction func resultClickButton(_ sender: UIButton) {
        
         //  アラート
-        if textField.text == "" {
+        if textView.text == "" {
         let alert = UIAlertController(title: "結果出る訳ありませんね", message: "質問をご入力ください", preferredStyle: .alert)
         present(alert, animated: true, completion: nil)
         //  通常の選択肢を作成する
@@ -106,13 +111,13 @@ class ViewController: UIViewController {
             alert.addAction(yesAction)
         }
     
-        // textFieldをresultLabelに移す画面遷移
+        // textViewをresultLabelに移す画面遷移
         // storyboardのインスタンス取得
         let storyboard: UIStoryboard = self.storyboard!
         // 遷移先ViewControllerのインスタンス取得
         let end = storyboard.instantiateViewController(withIdentifier: "end") as! ResultViewController
         // ①値の設定
-        end.result = textField.text!
+        end.result = textView.text!
         end.yes = aruarucount
         // ③画面遷移
         self.present(end, animated: true, completion: nil)
@@ -137,14 +142,9 @@ class ViewController: UIViewController {
             //グラデーションの開始色
             topColor = UIColor(red:233/255, green:205/255, blue:143/255, alpha:1)
             //グラデーションの終了色
-            bottomColor = UIColor(red:210/255, green:178/255, blue:100/255, alpha:1)}
-//         else if button == categoryButton {
-//            //グラデーションの開始色
-//            topColor = UIColor(red:56/255, green:58/255, blue:53/255, alpha:1)
-//            //グラデーションの終了色
-//            bottomColor = UIColor(red:80/255, green:78/255, blue:83/255, alpha:1)
-//        }
-        else {
+            bottomColor = UIColor(red:210/255, green:178/255, blue:100/255, alpha:1)
+            
+        } else {
             /////////////////青色
             //グラデーションの開始色
             topColor = UIColor(red:108/255, green:114/255, blue:168/255, alpha:1)
