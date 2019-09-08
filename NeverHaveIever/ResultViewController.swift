@@ -36,8 +36,5 @@ class ResultViewController: UIViewController {
         //    yesCLickButtonの値が出る
         yesLabel.text = "\(yes)"
     }
-    
 
-    
-    
 }
