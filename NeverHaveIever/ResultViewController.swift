@@ -37,4 +37,23 @@ class ResultViewController: UIViewController {
         yesLabel.text = "\(yes)"
     }
 
+    
+    @IBAction func didClickShare(_ sender: UIButton) {
+        let description1 = "#あるある"
+        let description2 = "#あるある探検隊"
+        let appName = "#あるあるないないゲーム"
+        let url = ""
+        let data = ["\(num)人中\(yes)あるある！\n \(url)\n \(appName)\(description1)\(description2)"] as [Any]
+        
+        let controller = UIActivityViewController(activityItems: data, applicationActivities: nil)
+        // iPadでシェアするとき、これがないとエラーになる
+        controller.popoverPresentationController?.sourceView = view
+        controller.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0)
+        
+        present(controller, animated: true, completion: nil)
+
+        
+    }
+    
+    
 }

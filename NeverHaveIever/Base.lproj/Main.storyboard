@@ -366,22 +366,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZy-es-WiL">
-                                <rect key="frame" x="241" y="613" width="114" height="34"/>
+                                <rect key="frame" x="10" y="40" width="108" height="33"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="ホームに">
+                                        <fragment content="ホームに戻る">
                                             <attributes>
                                                 <color key="NSColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="19" name=".HiraKakuInterface-W7"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                <integer key="NSUnderline" value="1"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="戻る">
-                                            <attributes>
-                                                <color key="NSColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="19" name=".HiraKakuInterface-W7"/>
-                                                <font key="NSOriginalFont" size="19" name=".HiraKakuInterface-W7"/>
+                                                <font key="NSFont" size="18" name=".HiraKakuInterface-W7"/>
+                                                <font key="NSOriginalFont" size="18" name=".HiraKakuInterface-W7"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 <integer key="NSUnderline" value="1"/>
                                             </attributes>
@@ -437,22 +429,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DBt-lK-xIQ">
+                                <rect key="frame" x="269" y="40" width="96" height="34"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="SNSシェア">
+                                            <attributes>
+                                                <color key="NSColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="19" name=".HiraKakuInterface-W7"/>
+                                                <font key="NSOriginalFont" size="21" name=".HiraKakuInterface-W7"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="didClickShare:" destination="dje-0O-ZxZ" eventType="touchUpInside" id="Prl-W8-36w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83882275302739717" green="0.83622750473972596" blue="0.83673218003150684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tDS-gg-2xn" firstAttribute="top" secondItem="teD-ip-t31" secondAttribute="top" constant="36" id="15F-m4-TGz"/>
+                            <constraint firstItem="DBt-lK-xIQ" firstAttribute="top" secondItem="teD-ip-t31" secondAttribute="top" constant="20" id="7kz-3d-rl9"/>
                             <constraint firstItem="hsM-wg-hkH" firstAttribute="leading" secondItem="teD-ip-t31" secondAttribute="leading" constant="63" id="95u-iv-Czb"/>
                             <constraint firstItem="teD-ip-t31" firstAttribute="trailing" secondItem="hsM-wg-hkH" secondAttribute="trailing" constant="66" id="9kt-E7-uBi"/>
                             <constraint firstItem="tDS-gg-2xn" firstAttribute="centerX" secondItem="gDF-GZ-LPe" secondAttribute="centerX" id="BAX-Ef-z4W"/>
-                            <constraint firstItem="teD-ip-t31" firstAttribute="bottom" secondItem="iZy-es-WiL" secondAttribute="bottom" constant="20" id="Bcb-Bg-u9V"/>
                             <constraint firstItem="hsM-wg-hkH" firstAttribute="top" secondItem="rlN-Gu-7LM" secondAttribute="bottom" constant="33" id="DES-Aq-gnh"/>
                             <constraint firstItem="7ba-iT-yZc" firstAttribute="leading" secondItem="teD-ip-t31" secondAttribute="leading" constant="24" id="GFu-Ri-NXo"/>
-                            <constraint firstItem="teD-ip-t31" firstAttribute="trailing" secondItem="iZy-es-WiL" secondAttribute="trailing" constant="20" id="Idr-zs-MQo"/>
+                            <constraint firstItem="iZy-es-WiL" firstAttribute="leading" secondItem="teD-ip-t31" secondAttribute="leading" constant="10" id="Hbq-RF-Ag9"/>
+                            <constraint firstItem="iZy-es-WiL" firstAttribute="top" secondItem="teD-ip-t31" secondAttribute="top" constant="20" id="LM8-yT-Q2A"/>
                             <constraint firstItem="tuG-fJ-bi7" firstAttribute="centerX" secondItem="gDF-GZ-LPe" secondAttribute="centerX" multiplier="0.9" constant="1" id="LyY-av-tJP"/>
                             <constraint firstItem="tuG-fJ-bi7" firstAttribute="top" secondItem="7ba-iT-yZc" secondAttribute="bottom" constant="12" id="Nbi-V0-uYn"/>
                             <constraint firstItem="7ba-iT-yZc" firstAttribute="top" secondItem="tDS-gg-2xn" secondAttribute="bottom" constant="12" id="Rfj-9B-w6h"/>
                             <constraint firstItem="teD-ip-t31" firstAttribute="trailing" secondItem="7ba-iT-yZc" secondAttribute="trailing" constant="24" id="a70-uZ-ZMU"/>
                             <constraint firstItem="7ba-iT-yZc" firstAttribute="centerX" secondItem="gDF-GZ-LPe" secondAttribute="centerX" id="bxd-h3-D0k"/>
+                            <constraint firstItem="teD-ip-t31" firstAttribute="trailing" secondItem="DBt-lK-xIQ" secondAttribute="trailing" constant="10" id="g18-Pe-T4e"/>
                             <constraint firstItem="lKY-LV-KII" firstAttribute="top" secondItem="hsM-wg-hkH" secondAttribute="bottom" constant="8" symbolic="YES" id="hz1-pX-2iz"/>
                             <constraint firstItem="rlN-Gu-7LM" firstAttribute="leading" secondItem="tuG-fJ-bi7" secondAttribute="trailing" constant="12" id="rR1-Kh-SAg"/>
                             <constraint firstItem="rlN-Gu-7LM" firstAttribute="bottom" secondItem="tuG-fJ-bi7" secondAttribute="bottom" id="wxK-o9-Fz8"/>
@@ -511,7 +524,7 @@
         <image name="あるある.001" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mAJ-AS-0By"/>
+        <segue reference="ho6-A3-3BG"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>

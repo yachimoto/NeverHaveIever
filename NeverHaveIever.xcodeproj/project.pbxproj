@@ -112,6 +112,7 @@
 				CE211F87230F76F500764E40 /* Frameworks */,
 				CE211F88230F76F500764E40 /* Resources */,
 				AF572F0DEC2E1896BBB2A459 /* [CP] Embed Pods Frameworks */,
+				CE29B4FC232F275400F8A5EB /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -207,6 +208,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NeverHaveIever/Pods-NeverHaveIever-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CE29B4FC232F275400F8A5EB /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Set the build number to the count of Git commits\nbuildNumber=$(git rev-list HEAD | wc -l | tr -d ' ')\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
