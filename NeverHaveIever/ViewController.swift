@@ -102,7 +102,7 @@ class ViewController: UIViewController {
        
         //  アラート
         if textView.text == "" {
-        let alert = UIAlertController(title: "結果出る訳ありませんね", message: "質問をご入力ください", preferredStyle: .alert)
+        let alert = UIAlertController(title: "結果が出る訳ありませんね", message: "質問をご入力ください", preferredStyle: .alert)
         present(alert, animated: true, completion: nil)
         //  通常の選択肢を作成する
         let yesAction = UIAlertAction(title: "はい", style: .default) { (UIAlertAction) in

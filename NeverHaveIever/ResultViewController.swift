@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ResultViewController: UIViewController {
 
@@ -16,6 +17,11 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var numLabel: UILabel!
     
     @IBOutlet weak var yesLabel: UILabel!
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+    
+    // 広告ユニットID
+    let AdMobID = "ca-app-pub-3940256099942544/2934735716"
     
     //    textFieldの値をresultLabelに持ってくる
     var result = ""
@@ -35,15 +41,25 @@ class ResultViewController: UIViewController {
         
         //    yesCLickButtonの値が出る
         yesLabel.text = "\(yes)"
+        
+        //   広告
+        print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
+        
+        bannerView.adUnitID = AdMobID
+        
+        bannerView.rootViewController = self
+        
+        bannerView.load(GADRequest())
+    
     }
 
-    
+    //    SNSシェア
     @IBAction func didClickShare(_ sender: UIButton) {
         let description1 = "#あるある"
         let description2 = "#あるある探検隊"
         let appName = "#あるあるないないゲーム"
         let url = ""
-        let data = ["\(num)人中\(yes)あるある！\n \(url)\n \(appName)\(description1)\(description2)"] as [Any]
+        let data = ["\(result)     \(num)人中\(yes)あるある！\n \(url)\n \(appName)            \(description1)    \(description2)"] as [Any]
         
         let controller = UIActivityViewController(activityItems: data, applicationActivities: nil)
         // iPadでシェアするとき、これがないとエラーになる
